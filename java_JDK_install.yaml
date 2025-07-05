@@ -3,17 +3,15 @@
   become: yes
   tasks:
 
-    - name: Install OpenJDK 8 on Ubuntu
-      apt:
-        name: openjdk-8-jre
-        state: present
-        update_cache: yes
-      when: ansible_os_family == "Debian"
-
-    - name: Install OpenJDK 8 on RedHat/Amazon
-      yum:
-        name: java-1.8.0-openjdk
+    - name: Install Java 17 on RHEL
+      dnf:
+        name: java-17-openjdk
         state: present
       when: ansible_os_family == "RedHat"
 
-
+    - name: Install Java 17 on Ubuntu
+      apt:
+        name: openjdk-17-jre
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
