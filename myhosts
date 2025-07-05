@@ -1,8 +1,5 @@
 [javaserver]
 172.31.6.206
-172.31.1.135
 172.31.2.57
 
-[javaserver:vars]
-myubuntujavapackage = openjdk-8-jre
-myredhatjavapackage = java-1.8.0-openjdk
+
