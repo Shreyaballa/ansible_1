@@ -1,6 +1,5 @@
 ---
-- name: Install Java 8 on Ubuntu and RedHat systems
-  hosts: all
+- hosts: all
   become: yes
   tasks:
 
@@ -8,11 +7,13 @@
       apt:
         name: openjdk-8-jre
         state: present
+        update_cache: yes
       when: ansible_os_family == "Debian"
 
-    - name: Install OpenJDK 8 on RedHat
+    - name: Install OpenJDK 8 on RedHat/Amazon
       yum:
-        name: java-1.8.0-openjdk-devel
+        name: java-1.8.0-openjdk
         state: present
       when: ansible_os_family == "RedHat"
+
 
