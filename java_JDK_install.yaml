@@ -1,17 +1,17 @@
 ---
-- hosts: all
+- hosts: javaserver
   become: yes
   tasks:
 
-    - name: Install Java 17 on RHEL
-      dnf:
-        name: java-17-openjdk
-        state: present
-      when: ansible_os_family == "RedHat"
-
-    - name: Install Java 17 on Ubuntu
+    - name: I want to Install Open JDK 8 on Ubuntu server
       apt:
-        name: openjdk-17-jre
+        name: openjdk-8-jre
         state: present
         update_cache: yes
       when: ansible_os_family == "Debian"
+
+    - name: I want to Install Open JDK 8 on RedHat server
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+      when: ansible_os_family == "RedHat"
