@@ -11,9 +11,10 @@
 
     - name: Install git
       apt:
-        name: git
+        name: gitt
         state: present
       tags: mygit
+      ignore_errors: yes
 
     - name: Install wget
       apt:
