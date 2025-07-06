@@ -1,12 +1,12 @@
 ---
-- hosts: javaserver
+- hosts: all
   become: yes
   tasks:
-    - name: Include external task file
-      include_tasks: createfileplaybook.yaml
+    - include_tasks: createfileplaybook.yaml
 
-    - name: Install Apache2 on node server
+    - name: i want to install apache2 in ansible-node
       apt:
         name: apache2
         state: present
+
 
