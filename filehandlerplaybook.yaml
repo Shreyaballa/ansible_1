@@ -2,9 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-    - include_tasks: createfileplaybook.yaml
+    - name: Include external task file
+      include_tasks: createfileplaybook.yaml
 
     - name: Install Apache2 on node server
       apt:
         name: apache2
         state: present
+
