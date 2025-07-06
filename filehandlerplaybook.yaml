@@ -2,9 +2,10 @@
 - hosts: all
   become: yes
   tasks:
-    - include_tasks: createfileplaybook.yaml
+    - name: Include task file
+      include_tasks: createfileplaybook.yaml
 
-    - name: i want to install apache2 in ansible-node
+    - name: Install Apache2
       apt:
         name: apache2
         state: present
