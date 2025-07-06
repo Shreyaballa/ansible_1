@@ -3,7 +3,7 @@
   become: yes
   tasks:
 
-     - name: i want to create a file in ansible-node
-       file:
-         path: /home/shreya/myfile1.txt
-         state: touch
+    - name: i want to create a file in ansible-node
+      file:
+        path: /home/shreya/myfile1.txt
+        state: touch
