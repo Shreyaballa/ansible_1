@@ -3,7 +3,12 @@
   become: yes
   tasks:
 
-    - name: i want to create a file in ansible-node
+    - name: Create a file in node server
       file:
         path: /home/shreya/myfile1.txt
         state: touch
+
+    - name: Write content to the file
+      copy:
+        content: "This file was created by Ansible."
+        dest: /home/shreya/myfile1.txt
