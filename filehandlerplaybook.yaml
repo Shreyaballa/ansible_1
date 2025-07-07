@@ -14,4 +14,11 @@
       template:
            src: newtemplatefile.j2
            dest: /var/www/html/index.html
+    
+  handlers:
+    - name: restartedservice
+      service:
+          name: apache2
+          state: present
+
 
