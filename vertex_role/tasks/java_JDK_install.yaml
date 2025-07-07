@@ -1,7 +1,4 @@
----
-- hosts: javaserver
-  become: yes
-  tasks:
+
 
     - name: I want to Install Open JDK 8 on Ubuntu server
       apt:

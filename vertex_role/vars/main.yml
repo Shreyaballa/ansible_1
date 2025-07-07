@@ -1,2 +1,4 @@
 ---
-# vars file for vertex_role
+# vars file for vertex_rolemyubuntujavapackage : openjdk-8-jre
+myubuntujavapackage : openjdk-8-jre
+myredhatjavapackage : java-11-openjdk
